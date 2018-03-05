@@ -1,20 +1,22 @@
+const swap = function (array, i) { 
+    if (array[i] > array[i + 1]) {
+        let temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+    }
+}
+
 function bubbleSort(array) {
-    
-    const swap = function (num1, num2) {
-        let temp = num1;
-        let temp2 = num2;
-        if (num1 > num2) {
-            array[i] = temp2;
-            array[i+1] = temp;
+    if (array.length < 2) {
+        return array;
+    } else {
+        console.log(array)
+        for (let j = 0; j < array.length; j++) {
+            for (let i = 0; i < array.length - 1; i++) {
+                swap(array, i);
+            }
         }
     }
-
-    for (let i = 0; i < array.length - 1; i++) {
-        swap(array[i], array[i+1]);
-    }
-    return array;  
-  }
-
-
-
-[ ]
+    console.log(array)
+    return array;
+}
