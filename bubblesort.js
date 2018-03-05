@@ -10,13 +10,13 @@ function bubbleSort(array) {
     if (array.length < 2) {
         return array;
     } else {
-        console.log(array)
+    
         for (let j = 0; j < array.length; j++) {
             for (let i = 0; i < array.length - 1; i++) {
                 swap(array, i);
             }
         }
     }
-    console.log(array)
+
     return array;
 }
