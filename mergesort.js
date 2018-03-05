@@ -5,6 +5,16 @@ function split(wholeArray) {
     return [firstHalf, secondHalf];
 }
 
-function merge(array) {
-    return [array[0].concat(array[1])];
+function merge(array1, array2) { // array with two arrays inside
+
+}
+
+function mergeSort(arrayToBeSorted) {
+    if (arrayToBeSorted.length <= 1) {
+        return arrayToBeSorted;
+    } else {
+        let splitArrayFirst = split(arrayToBeSorted)[0];
+        let splitArraySecond = split(arrayToBeSorted)[1];
+        return merge(mergeSort(splitArrayFirst), mergeSort(splitArraySecond));      
+    }
 }
